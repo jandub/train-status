@@ -1,8 +1,8 @@
-const express = require('express');
-const path = require('path');
-const logger = require('morgan');
+import express from 'express';
+import path from 'path';
+import logger from 'morgan';
 
-const index = require('./routes/index');
+import index from './routes/index';
 
 const app = express();
 app.use(logger('dev'));

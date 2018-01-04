@@ -1,9 +1,9 @@
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import path from 'path';
 
 const router = express.Router();
 
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
     res.sendFile(path.resolve('views/index.html'));
 });
 
