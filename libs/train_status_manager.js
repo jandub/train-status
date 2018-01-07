@@ -1,4 +1,4 @@
-/*
+/**
  *  I am not sure if using classes is the best practice. It seems like the js
  *  community is quite split on this. It is still just a different syntax for
  *  the prototype pattern and does not allow clean approach for having private
@@ -11,7 +11,7 @@
  *  like that is enough for this case. WeakMap might be better way for other cases.
  */
 
-/*
+/**
  *  Constants
  */
 const defStation = 'Y'; // All trains should start in station 'Y'
@@ -20,7 +20,7 @@ const trains = ['A', 'B', 'C', 'D'];
 const stations = ['Z', 'Y', 'X', 'V', 'W'];
 
 class TrainStatusManager {
-    /*
+    /**
      *  Initializes the train statuses object with default data.
      */
     constructor() {
@@ -36,7 +36,7 @@ class TrainStatusManager {
         }
     }
 
-    /*
+    /**
      *  Getters
      */
     get statuses() {
