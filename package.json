@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "babel-node ./bin/www",
-    "devstart": "DEBUG=train-status:* ./node_modules/nodemon/bin/nodemon.js ./bin/www -x babel-node -w ./ -e \"js html\""
+    "devstart": "DEBUG=train-status:* ./node_modules/nodemon/bin/nodemon.js ./bin/www -x babel-node -w ./ -e \"js html\"",
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register spec"
   },
   "dependencies": {
     "debug": "~2.6.9",
@@ -15,6 +16,8 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
     "nodemon": "^1.14.7"
   }
 }
