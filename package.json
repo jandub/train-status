@@ -5,7 +5,8 @@
   "scripts": {
     "start": "babel-node ./bin/www",
     "devstart": "DEBUG=train-status:* ./node_modules/nodemon/bin/nodemon.js ./bin/www -x babel-node -w ./ -e \"js html\"",
-    "test": "./node_modules/mocha/bin/mocha --require babel-core/register spec"
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register spec",
+    "build": "./node_modules/.bin/browserify -t vueify -t babelify -e public/javascripts/main.js -o public/javascripts/bundle.js"
   },
   "dependencies": {
     "debug": "~2.6.9",
@@ -17,8 +18,13 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.0.0",
     "chai": "^4.1.2",
     "mocha": "^4.1.0",
-    "nodemon": "^1.14.7"
+    "nodemon": "^1.14.7",
+    "vue": "^2.5.13",
+    "vue-socket.io": "^2.1.1-a",
+    "vueify": "^9.4.1"
   }
 }
