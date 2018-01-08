@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "babel-node ./bin/www",
-    "devstart": "DEBUG=train-status:* ./node_modules/nodemon/bin/nodemon.js ./bin/www -x babel-node -w ./ -e \"js html\"",
-    "test": "./node_modules/mocha/bin/mocha --require babel-core/register spec",
+    "devstart": "DEBUG=train-status:* ./node_modules/.bin/nodemon ./bin/www -x babel-node -w ./ -e \"js html\"",
+    "test": "./node_modules/.bin/mocha --require babel-core/register spec",
     "build": "./node_modules/.bin/browserify -t vueify -t babelify -e public/javascripts/main.js -o public/javascripts/bundle.js"
   },
   "dependencies": {
